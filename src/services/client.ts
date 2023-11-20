@@ -1,7 +1,15 @@
 import axios from "axios";
 
+let baseURL;
+
+if (process.env.NODE_ENV === "development") {
+  baseURL = "http://127.0.0.1:8080/api/v1";
+} else {
+  baseURL = "http://cashup.iptime.org:8080/api/v1";
+}
+
 const client = axios.create({
-  baseURL: "http://127.0.0.1:8080/api/v1",
+  baseURL: baseURL,
   headers: {
     "Content-Type": "application/json",
     Authorization:
