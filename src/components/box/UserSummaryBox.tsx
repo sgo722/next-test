@@ -64,7 +64,7 @@ const UserSummaryBox = () => {
       </div>
       <div className="flex flex-row justify-between px-2">
         <span>거래 기간</span>
-        <spn>2022년 09월 01일 ~ 2023년 10월 11일</spn>
+        <span>2022년 09월 01일 ~ 2023년 10월 11일</span>
       </div>
       {/* 공매수/공매도 현재 거래 자산 뷰 */}
       <div className="flex flex-row justify-between items-center pt-5">
