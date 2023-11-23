@@ -49,7 +49,7 @@ const OrderTable = ({ bodies }: BaseTableProps) => {
                 key={index}
                 className={cls(
                   "bg-white border-b dark:bg-gray-800 dark:border-gray-700 text-center",
-                  body.isCancelled ? "bg-red-50" : "",
+                  body.isCancelled ? "bg-red-100" : "",
                 )}
               >
                 <td className="px-3 py-2 truncate">
@@ -57,7 +57,7 @@ const OrderTable = ({ bodies }: BaseTableProps) => {
                 </td>
                 <td className="px-3 py-2 truncate ">{body.quantity}</td>
                 <td className="px-3 py-2 truncate">
-                  {(body.side === "Sell" && "-") + body.price.toString()}
+                  {(body.side === "Sell" ? "-" : "+") + body.price.toString()}
                 </td>
                 <td className="px-3 py-2 truncate">
                   {translateOrdType(body.ordType)}
